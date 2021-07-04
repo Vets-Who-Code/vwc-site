@@ -75,8 +75,8 @@ function IndexPage() {
             <div className="col-md-5 col-sm-12 no_left_pad no_right_pad img-responsive">
               <StaticImage
                 layout="fullWidth"
-                src="../images/jerome-jsconf.jpg"
-                alt="Jerome at JSConf"
+                src="https://res.cloudinary.com/vetswhocode/image/upload/v1604599365/Jerome-15_d2navt.jpg"
+                alt="Veteran Coding"
               />
             </div>
             <div className="col-md-7 col-sm-12 our_story_content text-center">
@@ -86,7 +86,7 @@ function IndexPage() {
               <p>
                 #VetsWhoCode is a veteran-led and operated 501(c)(3) charitable non-profit that
                 focuses on training veterans in programming and open source development with the
-                purpose of starting careers in the technology industry.
+                starting careers in the technology industry.
               </p>
             </div>
           </div>

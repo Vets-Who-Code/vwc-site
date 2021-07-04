@@ -20,6 +20,17 @@ const gatsbyConfig = {
       },
     },
     {
+      resolve:`gatsby-source-cloudinary`,
+      options: {
+      cloudName: process.env.CLOUDINARY_CLOUD_NAME,
+      apiKey: process.env.CLOUDINARY_API_KEY,
+      apiSecret: process.env.CLOUDINARY_API_SECRET,
+      resourceType: `image`,
+      type: `type Value`,
+      prefix: `abc-xyz/`
+      }
+  },
+    {
       resolve: `gatsby-plugin-gtag`,
       options: {
         // your google analytics tracking id

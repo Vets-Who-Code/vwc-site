@@ -5,7 +5,7 @@
   "dependencies": {
     "@hot-loader/react-dom": "17.0.1",
     "babel-preset-gatsby": "1.5.0",
-    "dotenv": "9.0.2",
+    "dotenv": "^10.0.0",
     "gatsby": "3.5.0",
     "gatsby-background-image": "1.5.3",
     "gatsby-image": "3.5.0",
