@@ -125,6 +125,11 @@ function Nav() {
               </Link>
             </li>
             <li role="menuitem" className="nav">
+              <Link to="/code-of-conduct">
+                <span>Code of Conduct</span>
+              </Link>
+            </li>
+            <li role="menuitem" className="nav">
               <Link to="/apply">
                 <span>Apply</span>
               </Link>

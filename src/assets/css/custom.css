@@ -92,7 +92,7 @@
   }
 }
 
-.testimonial-row {
+.testimonial-row, .coc-row {
   display: flex;
   flex-direction: 'row';
   justify-content: center;
@@ -101,12 +101,12 @@
 }
 
 @media only screen and (max-width: 767px) {
-  .testimonial-row {
+  .testimonial-row, .coc-row {
     flex-direction: column;
   }
 }
 
-.testimonial-text {
+.testimonial-text, .coc-text {
   margin: 0;
   flex: 1;
 }
@@ -144,6 +144,7 @@
 .lead-in p {
   text-align: center;
   color: var(--primary-3);
+  font-size: 1.5rem;
 }
 
 .testimonial-row img {
@@ -179,3 +180,5 @@
   font-family: Open Sans;
   font-weight: 800;
 }
+
+/* Code Of Conduct CSS */
