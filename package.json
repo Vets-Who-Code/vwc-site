@@ -4,6 +4,8 @@
   "repository": "Vets-Who-Code/vwc-site",
   "dependencies": {
     "@hot-loader/react-dom": "17.0.1",
+    "@material-ui/core": "^4.12.1",
+    "@material-ui/lab": "*",
     "babel-preset-gatsby": "1.5.0",
     "dotenv": "9.0.2",
     "gatsby": "3.5.0",
@@ -29,6 +31,7 @@
     "react-helmet": "6.1.0",
     "react-hook-form": "6.15.5",
     "react-icons": "4.2.0",
+    "react-indiana-drag-scroll": "^2.0.1",
     "react-modal": "3.13.1",
     "react-slick": "0.28.1",
     "react-toastify": "7.0.4",
