@@ -139,6 +139,11 @@ function Nav() {
                 <span>Blog</span>
               </Link>
             </li>
+            <li role="menuitem" className="nav">
+              <Link to="/jobs">
+                <span>Job Search</span>
+              </Link>
+            </li>
             <li role="menuitem" className="donate">
               <Link to="/donate">
                 <span>Donate</span>

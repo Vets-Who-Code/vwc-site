@@ -1,16 +1,17 @@
-import React, { useState, useRef } from 'react'
+import { useState, useRef } from 'react'
 import Typed from 'react-typed'
-import Form from '../components/JobApp/Form/Form'
-import Card from '../components/JobApp/Card/Card'
-import Loader from '../components/JobApp/Loader/Loader'
-import Video from '../components/JobApp/Video/Video'
-import NoResults from '../components/JobApp/NoResults/NoResults'
-import Paginate from '../components/JobApp/Pagination/Pagination'
+import Form from '../components/Jobs/Form/Form'
+import Card from '../components/Jobs/Card/Card'
+import Loader from '../components/Jobs/Loader/Loader'
+import Video from '../components/Jobs/Video/Video'
+import NoResults from '../components/Jobs/NoResults/NoResults'
+import Paginate from '../components/Jobs/Pagination/Pagination'
 import ScrollContainer from 'react-indiana-drag-scroll'
 import PageHeader from '../components/PageHeader'
 import SEO from '../components/SEO'
+import PropTypes from 'prop-types'
 
-export default function JobApp(props) {
+function Jobs({ theme, getDarkTheme }) {
   const [jobData, setJobData] = useState(false)
   const [clickEvent, setClickEvent] = useState(false)
   const [formSubmitted, setFormSubmitted] = useState(false)
@@ -45,17 +46,17 @@ export default function JobApp(props) {
 
   return (
     <>
-    <SEO title="Job Search" />
+      <SEO title="Job Search" />
       <PageHeader />
       <div className="container">
-        <h1 id="main-header" className={`main-header ${props.getDarkTheme}`}>
+        <h1 id="main-header" className={`main-header ${getDarkTheme}`}>
           JOB SEARCH
         </h1>
         <div className="typed-container">
           <div id="typed-strings">
-            <p className={`lead-in ${props.getDarkTheme}`}>
+            <p className={`lead-in ${getDarkTheme}`}>
               #VetsWhoCode{' '}
-              <span id="typed" className={`typed ${props.getDarkTheme}`}>
+              <span id="typed" className={`typed ${getDarkTheme}`}>
                 {' '}
                 <Typed
                   strings={[
@@ -81,7 +82,7 @@ export default function JobApp(props) {
         {/*  End Header  */}
 
         {/*  Search Bar  */}
-        <Form data={formData} theme={props.theme} />
+        <Form data={formData} theme={theme} />
         {/*  Search End  */}
 
         {/*  Empty Grid  */}
@@ -92,7 +93,7 @@ export default function JobApp(props) {
         {/*  End Empty Grid  */}
 
         {/*  Grid  */}
-        <div className={`jobgrid-container ${props.getDarkTheme}`}>
+        <div className={`jobgrid-container ${getDarkTheme}`}>
           <ScrollContainer
             ref={getGrid}
             hideScrollbars={false}
@@ -103,7 +104,7 @@ export default function JobApp(props) {
                 <Card
                   isSubmitted={formSubmitted}
                   jobData={job}
-                  theme={props.theme}
+                  theme={theme}
                   key={`job data card-${i}`}
                 />
               ))}
@@ -111,13 +112,20 @@ export default function JobApp(props) {
         </div>
       </div>
       <Paginate
-        theme={props.theme}
+        theme={theme}
         jobData={jobData}
         formData={formData}
         clickEvent={clickEvent}
         getGrid={getGrid}
       />
       {/*  End Grid  */}
-    </> // <-- render wrapper div
+    </>
   )
+}
+
+export default Jobs
+
+Jobs.propTypes = {
+  theme: PropTypes.string,
+  getDarkTheme: PropTypes.string,
 }

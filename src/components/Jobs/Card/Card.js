@@ -1,6 +1,6 @@
-import React from 'react'
+import PropTypes from 'prop-types'
 
-export default function Card({ isSubmitted, jobData, theme }) {
+function Card({ jobData, theme }) {
   let date = ''
   try {
     date = new Date(jobData.created).toLocaleDateString()
@@ -48,4 +48,11 @@ export default function Card({ isSubmitted, jobData, theme }) {
       </div>
     </div>
   )
+}
+
+export default Card
+
+Card.propTypes = {
+  jobData: PropTypes.string,
+  theme: PropTypes.string,
 }

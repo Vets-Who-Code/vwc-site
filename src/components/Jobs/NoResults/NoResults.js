@@ -1,6 +1,6 @@
-import React from 'react'
+import PropTypes from 'prop-types'
 
-export default function NoResults({ isSubmitted, jobData }) {
+function NoResults({ isSubmitted, jobData }) {
   return (
     <div>
       <p
@@ -12,4 +12,11 @@ export default function NoResults({ isSubmitted, jobData }) {
       </p>
     </div>
   )
+}
+
+export default NoResults
+
+NoResults.propTypes = {
+  isSubmitted: PropTypes.string,
+  jobData: PropTypes.string,
 }
