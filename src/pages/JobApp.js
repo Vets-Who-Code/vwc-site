@@ -7,6 +7,8 @@ import Video from '../components/JobApp/Video/Video'
 import NoResults from '../components/JobApp/NoResults/NoResults'
 import Paginate from '../components/JobApp/Pagination/Pagination'
 import ScrollContainer from 'react-indiana-drag-scroll'
+import PageHeader from '../components/PageHeader'
+import SEO from '../components/SEO'
 
 export default function JobApp(props) {
   const [jobData, setJobData] = useState(false)
@@ -42,7 +44,9 @@ export default function JobApp(props) {
   }
 
   return (
-    <div>
+    <>
+    <SEO title="Job Search" />
+      <PageHeader />
       <div className="container">
         <h1 id="main-header" className={`main-header ${props.getDarkTheme}`}>
           JOB SEARCH
@@ -114,6 +118,6 @@ export default function JobApp(props) {
         getGrid={getGrid}
       />
       {/*  End Grid  */}
-    </div> // <-- render wrapper div
+    </> // <-- render wrapper div
   )
 }
