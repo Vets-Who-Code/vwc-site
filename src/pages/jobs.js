@@ -48,69 +48,87 @@ function Jobs({ theme, getDarkTheme }) {
     <>
       <SEO title="Job Search" />
       <PageHeader />
-      <div className="container">
-        <h1 id="main-header" className={`main-header ${getDarkTheme}`}>
-          JOB SEARCH
-        </h1>
-        <div className="typed-container">
-          <div id="typed-strings">
-            <p className={`lead-in ${getDarkTheme}`}>
-              #VetsWhoCode{' '}
-              <span id="typed" className={`typed ${getDarkTheme}`}>
-                {' '}
-                <Typed
-                  strings={[
-                    'provides job placement assistance.',
-                    '^2000 makes a difference in the lives of veterans.',
-                  ]}
-                  typeSpeed={50}
-                  backSpeed={50}
-                  loop
-                  startDelay={1000}
-                  backDelay={3000}
-                />
-              </span>
-            </p>
+      <section id="jobs" className="small-top-pad section bg-default">
+        <div className="container">
+          <div className="row">
+            <div className="col-md-12 lead-in">
+              <h1 id="main-header" className="story-title">
+                JOB SEARCH
+              </h1>
+              <p>
+                <i>
+                  {' '}
+                  <div className="typed-container">
+                    <div id="typed-strings">
+                      <p className="pt-0">
+                        #VetsWhoCode{' '}
+                        <span id="typed" className={`typed ${getDarkTheme}`}>
+                          {' '}
+                          <Typed
+                            strings={[
+                              'provides job placement assistance.',
+                              '^2000 makes a difference in the lives of veterans.',
+                            ]}
+                            typeSpeed={50}
+                            backSpeed={50}
+                            loop
+                            startDelay={1000}
+                            backDelay={3000}
+                          />
+                        </span>
+                      </p>
+                    </div>
+                  </div>
+                </i>
+              </p>
+            </div>
+          </div>
+          <div className="col-md-12">
+            <div className="row">
+              <div className="faq-short-brief container-fluid">
+                <p>
+                  Vets Who Code Job Search (VWC) is a tool for connecting veterans, military, and
+                  military spouses with jobs. Our goal is to make every workplace fair and
+                  profitable by bringing together the perfect candidate with the ideal employer. Our
+                  site pairs technology and best practices in order to promote practical and gainful
+                  employment.
+                </p>
+              </div>
+            </div>
+          </div>
+          {/*  End Header  */}
+
+          {/*  Search Bar  */}
+          <Form data={formData} theme={theme} />
+          {/*  Search End  */}
+
+          {/*  Empty Grid  */}
+          <div id="middle" className="middle"></div>
+          <NoResults isSubmitted={formSubmitted} jobData={jobData} />
+          <Loader isSubmitted={formSubmitted} jobData={jobData} />
+          <Video isSubmitted={formSubmitted} />
+          {/*  End Empty Grid  */}
+
+          {/*  Grid  */}
+          <div className={`jobgrid-container ${getDarkTheme}`}>
+            <ScrollContainer
+              ref={getGrid}
+              hideScrollbars={false}
+              className={`jobgrid hide-native-scrollbar ${jobData ? 'scroll-container' : 'hidden'}`}
+            >
+              {jobData &&
+                jobData.results.map((job, i) => (
+                  <Card
+                    isSubmitted={formSubmitted}
+                    jobData={job}
+                    theme={theme}
+                    key={`job data card-${i}`}
+                  />
+                ))}
+            </ScrollContainer>
           </div>
         </div>
-        <p className="job-search-description">
-          Vets Who Code Job Search (VWC) is a tool for connecting veterans, military, and military
-          spouses with jobs. Our goal is to make every workplace fair and profitable by bringing
-          together the perfect candidate with the ideal employer. Our site pairs technology and best
-          practices in order to promote practical and gainful employment.
-        </p>
-        {/*  End Header  */}
-
-        {/*  Search Bar  */}
-        <Form data={formData} theme={theme} />
-        {/*  Search End  */}
-
-        {/*  Empty Grid  */}
-        <div id="middle" className="middle"></div>
-        <NoResults isSubmitted={formSubmitted} jobData={jobData} />
-        <Loader isSubmitted={formSubmitted} jobData={jobData} />
-        <Video isSubmitted={formSubmitted} />
-        {/*  End Empty Grid  */}
-
-        {/*  Grid  */}
-        <div className={`jobgrid-container ${getDarkTheme}`}>
-          <ScrollContainer
-            ref={getGrid}
-            hideScrollbars={false}
-            className={`jobgrid hide-native-scrollbar ${jobData ? 'scroll-container' : 'hidden'}`}
-          >
-            {jobData &&
-              jobData.results.map((job, i) => (
-                <Card
-                  isSubmitted={formSubmitted}
-                  jobData={job}
-                  theme={theme}
-                  key={`job data card-${i}`}
-                />
-              ))}
-          </ScrollContainer>
-        </div>
-      </div>
+      </section>
       <Paginate
         theme={theme}
         jobData={jobData}
