@@ -130,6 +130,11 @@ function Nav() {
               </Link>
             </li>
             <li role="menuitem" className="nav">
+              <Link to="/jobs">
+                <span>Job Search</span>
+              </Link>
+            </li>
+            <li role="menuitem" className="nav">
               <Link to="/contact">
                 <span>Contact</span>
               </Link>
@@ -137,11 +142,6 @@ function Nav() {
             <li role="menuitem" className="nav">
               <Link to="/blog">
                 <span>Blog</span>
-              </Link>
-            </li>
-            <li role="menuitem" className="nav">
-              <Link to="/jobs">
-                <span>Job Search</span>
               </Link>
             </li>
             <li role="menuitem" className="donate">
