@@ -1,6 +1,6 @@
-import React from 'react'
+import PropTypes from 'prop-types'
 
-export default function Loader({ isSubmitted, jobData }) {
+function Loader({ isSubmitted, jobData }) {
   return (
     <div className={`loading ${isSubmitted && jobData === false ? '' : 'hidden'}`}>
       <div className="ball first"></div>
@@ -8,4 +8,11 @@ export default function Loader({ isSubmitted, jobData }) {
       <div className="ball third"></div>
     </div>
   )
+}
+
+export default Loader
+
+Loader.propTypes = {
+  isSubmitted: PropTypes.bool,
+  jobData: PropTypes.bool,
 }

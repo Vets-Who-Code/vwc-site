@@ -1,6 +1,4 @@
-import React from 'react'
-
-export default function Distance() {
+function Distance() {
   return (
     <div className="form-group" id="sel1">
       <label htmlFor="sel1"></label>
@@ -19,3 +17,5 @@ export default function Distance() {
     </div>
   )
 }
+
+export default Distance

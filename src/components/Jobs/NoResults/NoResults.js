@@ -17,6 +17,6 @@ function NoResults({ isSubmitted, jobData }) {
 export default NoResults
 
 NoResults.propTypes = {
-  isSubmitted: PropTypes.string,
-  jobData: PropTypes.string,
+  isSubmitted: PropTypes.bool,
+  jobData: PropTypes.bool,
 }

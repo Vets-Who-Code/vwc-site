@@ -9,9 +9,8 @@ import Paginate from '../components/Jobs/Pagination/Pagination'
 import ScrollContainer from 'react-indiana-drag-scroll'
 import PageHeader from '../components/PageHeader'
 import SEO from '../components/SEO'
-import PropTypes from 'prop-types'
 
-function Jobs({ theme, getDarkTheme }) {
+function Jobs() {
   const [jobData, setJobData] = useState(false)
   const [clickEvent, setClickEvent] = useState(false)
   const [formSubmitted, setFormSubmitted] = useState(false)
@@ -62,7 +61,7 @@ function Jobs({ theme, getDarkTheme }) {
                     <div id="typed-strings">
                       <p className="pt-0">
                         #VetsWhoCode{' '}
-                        <span id="typed" className={`typed ${getDarkTheme}`}>
+                        <span id="typed" className="typed">
                           {' '}
                           <Typed
                             strings={[
@@ -99,7 +98,7 @@ function Jobs({ theme, getDarkTheme }) {
           {/*  End Header  */}
 
           {/*  Search Bar  */}
-          <Form data={formData} theme={theme} />
+          <Form data={formData} />
           {/*  Search End  */}
 
           {/*  Empty Grid  */}
@@ -110,7 +109,7 @@ function Jobs({ theme, getDarkTheme }) {
           {/*  End Empty Grid  */}
 
           {/*  Grid  */}
-          <div className={`jobgrid-container ${getDarkTheme}`}>
+          <div className="jobgrid-container">
             <ScrollContainer
               ref={getGrid}
               hideScrollbars={false}
@@ -118,32 +117,16 @@ function Jobs({ theme, getDarkTheme }) {
             >
               {jobData &&
                 jobData.results.map((job, i) => (
-                  <Card
-                    isSubmitted={formSubmitted}
-                    jobData={job}
-                    theme={theme}
-                    key={`job data card-${i}`}
-                  />
+                  <Card isSubmitted={formSubmitted} jobData={job} key={`job data card-${i}`} />
                 ))}
             </ScrollContainer>
           </div>
         </div>
       </section>
-      <Paginate
-        theme={theme}
-        jobData={jobData}
-        formData={formData}
-        clickEvent={clickEvent}
-        getGrid={getGrid}
-      />
+      <Paginate jobData={jobData} formData={formData} clickEvent={clickEvent} getGrid={getGrid} />
       {/*  End Grid  */}
     </>
   )
 }
 
 export default Jobs
-
-Jobs.propTypes = {
-  theme: PropTypes.string,
-  getDarkTheme: PropTypes.string,
-}

@@ -1,6 +1,4 @@
-import React from 'react'
-
-export default function Checkbox() {
+function Checkbox() {
   return (
     <span>
       <input className="form-check-input" type="checkbox" id="inlineFormCheck" />
@@ -10,3 +8,5 @@ export default function Checkbox() {
     </span>
   )
 }
+
+export default Checkbox

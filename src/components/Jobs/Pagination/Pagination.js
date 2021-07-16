@@ -1,8 +1,8 @@
-import React from 'react'
 import Pagination from '@material-ui/lab/Pagination'
 import { makeStyles } from '@material-ui/core/styles'
+import PropTypes from 'prop-types'
 
-export default function Paginate({ theme, jobData, formData, clickEvent, getGrid }) {
+function Paginate({ theme, jobData, formData, clickEvent, getGrid }) {
   const pageChange = (event, value) => {
     formData(clickEvent, value)
     getGrid.current.container.current.scrollTop = 0
@@ -45,4 +45,14 @@ export default function Paginate({ theme, jobData, formData, clickEvent, getGrid
       </div>
     </div>
   )
+}
+
+export default Paginate
+
+Paginate.propTypes = {
+  jobData: PropTypes.bool,
+  formData: PropTypes.bool,
+  clickEvent: PropTypes.object,
+  getGrid: PropTypes.string,
+  theme: PropTypes.string,
 }

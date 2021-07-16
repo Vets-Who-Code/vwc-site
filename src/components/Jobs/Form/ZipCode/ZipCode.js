@@ -1,6 +1,4 @@
-import React from 'react'
-
-export default function ZipCode() {
+function ZipCode() {
   return (
     <span>
       <label className="sr-only" htmlFor="zipCode">
@@ -17,3 +15,5 @@ export default function ZipCode() {
     </span>
   )
 }
+
+export default ZipCode
