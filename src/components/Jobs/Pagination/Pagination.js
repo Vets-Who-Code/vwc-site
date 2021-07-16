@@ -1,5 +1,6 @@
 import Pagination from '@material-ui/lab/Pagination'
 import { makeStyles } from '@material-ui/core/styles'
+import { StaticImage } from 'gatsby-plugin-image'
 import PropTypes from 'prop-types'
 
 function Paginate({ theme, jobData, formData, clickEvent, getGrid }) {
@@ -40,7 +41,13 @@ function Paginate({ theme, jobData, formData, clickEvent, getGrid }) {
           <a href="https://www.adzuna.com/" target="_blank" rel="noopener noreferrer">
             Adzuna{' '}
           </a>
-          <img className="adzuna-logo" src="images/adzuna.png" alt="Adzuna Logo" />
+          <StaticImage
+            width={12}
+            height={12}
+            className="adzuna-logo"
+            src="../../../images/adzuna.png"
+            alt="Adzuna Logo"
+          />
         </div>
       </div>
     </div>
