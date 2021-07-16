@@ -98,14 +98,30 @@ function Jobs() {
           {/*  End Header  */}
 
           {/*  Search Bar  */}
-          <Form data={formData} />
+          <div className="container">
+            <div className="row">
+              <div className="col-md-12">
+                <Form data={formData} />
+              </div>
+            </div>
+          </div>
           {/*  Search End  */}
 
           {/*  Empty Grid  */}
           <div id="middle" className="middle"></div>
           <NoResults isSubmitted={formSubmitted} jobData={jobData} />
           <Loader isSubmitted={formSubmitted} jobData={jobData} />
-          <Video isSubmitted={formSubmitted} />
+          <div className="container" style={{ marginTop: 20 }}>
+            <div className="row">
+              <div className="col-md-12">
+                <div className="col-md-3"></div>
+                <div className="col-md-6">
+                  <Video isSubmitted={formSubmitted} />
+                </div>
+                <div className="col-md-3"></div>
+              </div>
+            </div>
+          </div>
           {/*  End Empty Grid  */}
 
           {/*  Grid  */}

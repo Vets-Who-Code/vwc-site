@@ -27,6 +27,7 @@ function Video({ isSubmitted }) {
       onPlay={play}
       ref={videoRef}
       type="video/mp4"
+      width={800}
     >
       <source src={veteranVideo} />
     </video>
