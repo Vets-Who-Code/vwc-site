@@ -139,7 +139,16 @@ function Jobs() {
           </div>
         </div>
       </section>
-      <Paginate jobData={jobData} formData={formData} clickEvent={clickEvent} getGrid={getGrid} />
+      <div className="container">
+        <div className="row">
+          <Paginate
+            jobData={jobData}
+            formData={formData}
+            clickEvent={clickEvent}
+            getGrid={getGrid}
+          />
+        </div>
+      </div>
       {/*  End Grid  */}
     </>
   )

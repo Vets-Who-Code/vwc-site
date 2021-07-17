@@ -2,6 +2,7 @@ import Pagination from '@material-ui/lab/Pagination'
 import { makeStyles } from '@material-ui/core/styles'
 import { StaticImage } from 'gatsby-plugin-image'
 import PropTypes from 'prop-types'
+import './pagination.css'
 
 function Paginate({ theme, jobData, formData, clickEvent, getGrid }) {
   const pageChange = (event, value) => {
@@ -35,6 +36,7 @@ function Paginate({ theme, jobData, formData, clickEvent, getGrid }) {
           showLastButton
           color={theme === 'light' ? 'primary' : 'secondary'}
           onChange={pageChange}
+          className="inner-pagination"
         />
         <div className={`adzuna ${theme === 'light' ? '' : 'dark-theme'}`}>
           Powered By{' '}

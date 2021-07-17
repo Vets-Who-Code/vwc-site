@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types'
+import './card.css'
 
 function Card({ jobData }) {
   let date = ''
