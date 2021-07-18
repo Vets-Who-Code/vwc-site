@@ -112,7 +112,7 @@ function Jobs() {
           <div id="middle" className="middle"></div>
           <NoResults isSubmitted={formSubmitted} jobData={jobData} />
           <Loader isSubmitted={formSubmitted} jobData={jobData} />
-          <div className="container" style={{ marginTop: 20 }}>
+          <div className="container" style={{ marginTop: 80 }}>
             <div className="row">
               <div className="col-md-12">
                 <div className="col-md-3"></div>
