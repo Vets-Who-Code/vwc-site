@@ -1,0 +1,23 @@
+.jobgrid {
+  overflow: auto;
+  height: 700px;
+  width: auto;
+  margin: 0 30px;
+}
+
+.jobgrid-container {
+  margin: 0;
+  cursor: grab;
+}
+
+.hide-native-scrollbar {
+  scrollbar-width: none;
+  /* Firefox 64 */
+  -ms-overflow-style: none;
+  /* Internet Explorer 11 */
+}
+
+.hide-native-scrollbar::-webkit-scrollbar {
+  /** WebKit */
+  display: none;
+}

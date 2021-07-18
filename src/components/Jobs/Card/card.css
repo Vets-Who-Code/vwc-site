@@ -1,0 +1,72 @@
+.grid-container {
+  display: flex;
+  flex-flow: row wrap;
+  border: 1px solid lightgrey;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  width: 100%;
+  margin: 20px auto;
+  cursor: grab;
+  overflow: hidden;
+}
+
+.grid-item {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.grid-container:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.grid-item {
+  display: block;
+  background-color: white;
+  color: var(--dark-grey);
+  padding: 2%;
+  width: 100%;
+}
+
+.grid-item-1 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.grid-item-2 {
+  font-size: 1.2rem;
+}
+
+.grid-item-3 {
+  font-size: 1.2rem;
+}
+
+.grid-item-4 {
+  font-size: 1rem;
+  color: var(--medium-grey);
+  line-height: 25px;
+}
+
+.grid-item-5 {
+  font-size: 1rem;
+  font-weight: bold;
+  color: var(--medium-grey);
+}
+
+.grid-item-6 {
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.apply {
+  float: right;
+  background-color: var(--light-red);
+  padding: 1%;
+  border: 1px solid black;
+}
+
+.apply:hover {
+  background-color: var(--medium-blue);
+  padding: 1%;
+}

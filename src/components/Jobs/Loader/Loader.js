@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types'
+import './loader.css'
 
 function Loader({ isSubmitted, jobData }) {
   return (

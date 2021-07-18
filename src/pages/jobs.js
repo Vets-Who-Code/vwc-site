@@ -27,8 +27,9 @@ function Jobs() {
       remote: event.target[1].checked,
       distance: event.target[2].value,
     }
-    let what = 'JavaScript ReactJS Gatsby GraphQL NodeJS node.js'
-    let exclude = '0000 senior sr. Senior sr Sr. principal lead master'
+
+    let what = 'javascript react gatsby graphql node jquery bootstrap'
+    let exclude = '0000 senior sr principal lead master'
 
     let url = `https://test-vwc-job-app.netlify.app/.netlify/functions/jobs/${page}?&results_per_page=15&what_or=${what}&where=${
       formResponse.zipCode
